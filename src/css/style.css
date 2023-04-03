@@ -14,6 +14,25 @@ body {
     justify-content: center;
 }
 
+input {
+  height: 30px;
+  font-size: 20px;
+  margin: auto 0;
+  border: none;
+}
+
+.search {
+  cursor: pointer;
+  height: 32px;
+  font-size: 20px;
+  margin: auto 0;
+  border: none;
+}
+.search:hover {
+  background-color: rgb(209, 209, 209);
+  transition: 300ms;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +85,11 @@ a {
   cursor: pointer;
 
   font-size: 20px;
+}
+
+.load-more:hover {
+  background-color: rgb(255, 71, 39);
+  transition: 300ms;
 }
 
 .hidden {
