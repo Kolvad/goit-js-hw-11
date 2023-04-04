@@ -28,13 +28,16 @@ function submitRef(e) {
     if (res.data.total === 40 && res.data.total < 40) {
       buttonLoadMore.classList.add('hidden');
     }
+
     if (res.data.total > 40) {
       buttonLoadMore.classList.remove('hidden');
     }
+
     if (res.data.hits.length === 0) {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
+      buttonLoadMore.classList.add('hidden');
     } else {
       renderPic(res.data.hits);
       Notiflix.Notify.success(`Hooray! We found ${res.data.totalHits} images.`);
