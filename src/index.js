@@ -32,6 +32,9 @@ function submitRef(e) {
     if (res.data.total > 40) {
       buttonLoadMore.classList.add('hidden');
     }
+    if (res.data.total > 40) {
+      buttonLoadMore.classList.remove('hidden');
+    }
 
     if (res.data.hits.length === 0) {
       Notiflix.Notify.failure(
@@ -111,9 +114,6 @@ function onLoadMore() {
       }
       if (totalHits < 40) {
         buttonLoadMore.classList.add('hidden');
-      }
-      if (res.data.total > 40) {
-        buttonLoadMore.classList.remove('hidden');
       }
 
       renderPic(images);
